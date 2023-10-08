@@ -6,13 +6,86 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/lab4image" />
+
+    <TextView
+        android:id="@+id/longitudeText"
+        android:layout_width="350dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="40dp"
+        android:text="Longitude:"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/accuracyText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/accuracyText"
+        android:layout_width="350dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="40dp"
+        android:text="Accuracy:"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/altitudeText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/altitudeText"
+        android:layout_width="350dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="40dp"
+        android:text="Altitude:"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/addressText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/addressText"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="200dp"
+        android:textStyle="bold"
+        android:text="Address:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/addressTextView"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:text="Location"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13999999" />
+
+    <TextView
+        android:id="@+id/latitudeText"
+        android:layout_width="350dp"
+        android:textStyle="bold"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="40dp"
+        android:text="Latitude:"
+        app:layout_constraintBottom_toTopOf="@+id/longitudeText"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
