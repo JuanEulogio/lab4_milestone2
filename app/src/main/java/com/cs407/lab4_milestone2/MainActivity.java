@@ -112,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         Log.i("LocationInfo",location.toString());
         TextView latTextView=(TextView)findViewById(R.id.latitudeText);
         TextView LonTextView=(TextView)findViewById(R.id.longitudeText);
@@ -123,8 +122,5 @@ public class MainActivity extends AppCompatActivity {
         LonTextView.setText("Longitude:"+location.getLongitude());
         altTextView.setText("Altitude:"+location.getAltitude());
         accTextView.setText("Accuracy:"+location.getAccuracy());
-
-
-
     }
 }
